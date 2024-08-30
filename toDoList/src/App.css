@@ -1,0 +1,80 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.todo-app {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.status-column {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.status-column h2 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.todo-item span {
+  flex-grow: 1;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.nav-buttons button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nav-buttons button:disabled {
+  background-color: #d3d3d3;
+  cursor: not-allowed;
+}
+
+.nav-buttons button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .todo-app {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
